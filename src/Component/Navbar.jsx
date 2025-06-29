@@ -39,8 +39,8 @@ export const Navbar = () => {
         <div className="flex flex-col items-center z-10">
           <div><img className='w-40 rounded-full border-3 border-[#0099ff8e]' src="src\assets\Zangetsu.jpg" alt="Profile" /></div>
           <div className='mt-2'>
-            <h2 className=' text-center text-2xl tracking-wide'>MUNNA</h2>
-            <p className='text-center'>Co Founder And Ceo</p>
+            <h2 className=' text-center text-2xl tracking-wide font-OpenSans'>MUNNA</h2>
+            <p className='text-center font-OpenSans text-[#808080de]'>Co Founder And Ceo</p>
             </div>
         </div>
 

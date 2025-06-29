@@ -1,4 +1,6 @@
 /* -------TailWind------ */
 @import "tailwindcss";
 
-@theme
+@theme{
+    --font-OpenSans:"Open Sans", "sans-serif";
+}
