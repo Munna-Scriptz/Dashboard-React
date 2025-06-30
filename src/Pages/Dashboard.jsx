@@ -1,5 +1,4 @@
 import React from 'react'
-
 export const Dashboard = () => {
 
   const MyData = [
@@ -34,7 +33,7 @@ export const Dashboard = () => {
         {
           MyData.map((items , e) => (
         <div key={e} className='flex items-center gap-2'>
-          <img src="src\assets\UserIcon.png" alt="Icon" />
+          <img src='{items.Image}' alt="Icon" />
           <div>
             <h2 className='text-[#3B3563] font-Inter'>Total Users</h2>
             <p className='text-[24px] text-[#0A033C]'>10438</p>
