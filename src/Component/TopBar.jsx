@@ -12,10 +12,10 @@ export const TopBar = () => {
       <nav className="w-full h-12 bg-transparent flex justify-between px-5 pt-5 mb-10">
         <div className="flex items-center gap-5">
           <FaBarsStaggered size={25} />
-          <div class="relative">
+          <div className="relative">
             <input
               placeholder="Search..."
-              class="input border-2 border-gray-300 px-7 py-2.5 rounded-xl w-60 transition-all focus:w-70 outline-none"
+              className="input border-2 border-gray-300 px-7 py-2.5 rounded-xl w-60 transition-all focus:w-70 outline-none"
               name="search"
               type="search"
             />
