@@ -3,6 +3,8 @@ import BookIcon from "../assets/BookIcon.png";
 import AddIcon from "../assets/AddIcon.png";
 import ReadIcon from "../assets/ReadIcon.png";
 import UserIcon from "../assets/UserIcon.png";
+import { FaArrowTrendDown } from "react-icons/fa6";
+import { FaArrowTrendUp } from "react-icons/fa6";
 
 export const Dashboard = () => {
   const MyData = [
@@ -14,6 +16,7 @@ export const Dashboard = () => {
       Width: '87%',
       Percentage: '2.5%',
       PercentageColor: '#00C566',
+      PercentageIcon: <FaArrowTrendUp color="#00C566"/> ,
     },
     {
       Image: AddIcon,
@@ -23,6 +26,7 @@ export const Dashboard = () => {
       Width: '57%',
       Percentage: '0.5%',
       PercentageColor: '#FD1B1B',
+      PercentageIcon: <FaArrowTrendDown color="#FD1B1B"/> ,
     },
     {
       Image: BookIcon,
@@ -30,8 +34,9 @@ export const Dashboard = () => {
       TextNumber: "135",
       barColor: '#FF6652',
       Width: '95%',
-      Percentage: '0.7%',
+      Percentage: '10.7%',
       PercentageColor: '#00C566',
+      PercentageIcon: <FaArrowTrendUp color="#00C566"/> ,
     },
     {
       Image: ReadIcon,
@@ -39,8 +44,9 @@ export const Dashboard = () => {
       TextNumber: "95",
       barColor: '#7F56D9' ,
       Width: '78%',
-      Percentage: '10.5%',
+      Percentage: '0.7%',
       PercentageColor: '#FD1B1B',
+      PercentageIcon: <FaArrowTrendDown color="#FD1B1B"/> ,
     },
   ];
 
@@ -68,7 +74,7 @@ export const Dashboard = () => {
               <div className="absolute left-0 bottom-0 h-full rounded-2xl" style={{ backgroundColor: items.barColor, width: items.Width }}></div>
             </div>
             <div className=" mt-2.5">
-              <p><span>{items.Percentage} </span> than last week</p>
+              <p className=" font-Inter text-[14px] text-[#6C688A] font-medium flex items-center gap-1.5"><span>{items.PercentageIcon}</span><span style={{color: items.PercentageColor,}}>{items.Percentage} </span> than last week</p>
             </div>
           </div>
         ))}
