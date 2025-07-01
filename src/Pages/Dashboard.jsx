@@ -106,6 +106,49 @@ export const Dashboard = () => {
           <button className="px-5 py-4 bg-gradient-to-br from-[#7ec8fa] to-[#4DB8FF] text-white rounded-2xl flex items-center gap-3 cursor-pointer"><FiPlus size={22}/> Add user</button>
           </div>
         </div>
+        {/* -------Input Box------- */}
+        <div className="mt-10 flex justify-between items-center border-b-2 border-[#57575775] pb-5">
+          <div className="flex items-center gap-3">
+            <input placeholder="Username..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-50 outline-none" name="search" type="search" />
+            <input placeholder="Number..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-50 outline-none" name="search" type="search" />
+            <input placeholder="Role..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-30 outline-none" name="search" type="search" />
+            <input placeholder="Date..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-60 outline-none" name="search" type="search" />
+          </div>
+          <div>
+          <button className="px-5 py-4 bg-gradient-to-br from-[#7ec8fa] to-[#4DB8FF] text-white rounded-2xl flex items-center gap-3 cursor-pointer w-60"><FiPlus size={22}/> Add</button>
+          </div>
+        </div>
+        {/* -------Profile Box------- */}
+        <div className="mt-2 flex justify-around">
+          <h2 className="font-medium">Profile & Username</h2>
+          <h2 className="font-medium">Email Address</h2>
+          <h2 className="font-medium">Role</h2>
+          <h2 className="font-medium">Number</h2>
+          <h2 className="font-medium">Status</h2>
+        </div>
+        <div className="mt-5 flex justify-around">
+          <div className="flex items-center gap-3">
+            <div className="h-12 w-12 bg-[#6C688A] rounded-4xl"></div>
+            <h2 className="font-medium">Joh doe</h2>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <h2 className="font-medium">munnascript@gmail.com</h2>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <h2 className="font-medium bg-[#ff665246] py-1.5 px-6 rounded-2xl text-[#FF6652]">Admin</h2>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <h2 className="font-medium">0192345345</h2>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 bg-[#25d881] rounded-2xl"></div>
+            <h2 className="font-medium">online</h2>
+          </div>
+        </div>
+
     </section>
     </>
   );
