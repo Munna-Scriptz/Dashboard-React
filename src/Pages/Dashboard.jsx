@@ -5,6 +5,9 @@ import ReadIcon from "../assets/ReadIcon.png";
 import UserIcon from "../assets/UserIcon.png";
 import { FaArrowTrendDown } from "react-icons/fa6";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { FiPlus } from "react-icons/fi";
+import { TiMinus } from "react-icons/ti";
+
 
 export const Dashboard = () => {
   const MyData = [
@@ -61,13 +64,17 @@ export const Dashboard = () => {
             <div className="flex gap-5 items-center">
               <img src={items.Image} alt="Icon" />
               <div>
-                <h2 className="text-[#3B3563] font-Inter text-[14px]">
+                <h2 className="text-[#3B3563] font-Inter text-[12px]">
                   {items.HeaderText}
                 </h2>
-                <p className="text-[24px] text-[#0A033C] font-semibold font-Inter">
+                <p className="text-[22px] text-[#0A033C] font-semibold font-Inter">
                   {items.TextNumber}
                 </p>
               </div>
+              <div className="flex flex-col gap-2">
+                  <p className="w-6.5 h-6.5 bg-[#25d881] flex justify-center items-center text-center rounded-2xl cursor-pointer"><FiPlus /></p>
+                  <p className="w-6.5 h-6.5 bg-[#FD1B1B] flex justify-center items-center text-center rounded-2xl cursor-pointer"><TiMinus /></p>
+                </div>
             </div>
             {/* --------ProgressBar------------ */}
             <div className=" relative w-full h-3 bg-[#c9c9c9] rounded-2xl mt-4">
