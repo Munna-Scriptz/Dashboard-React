@@ -60,6 +60,16 @@ export const Dashboard = () => {
       PercentageIcon: <FaArrowTrendDown color="#FD1B1B"/> ,
     },
   ];
+  const [UserInput , SetInput] = useState('')
+  const [UserInput2 , SetInput2] = useState('')
+  const [UserInput3 , SetInput3] = useState('')
+  const [UserInput4 , SetInput4] = useState('')
+
+  const HandleInput = (Data)=>{
+    if(UserInput == ''){
+      alert('Information Cannot be empty')
+    }
+  }
   return (
     <>
     {/* --------------Header---------------- */}
@@ -83,8 +93,8 @@ export const Dashboard = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                  <p className="w-6.5 h-6.5 bg-[#25d881] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={HandlePlus}><FiPlus /></p>
-                  <p className="w-6.5 h-6.5 bg-[#FD1B1B] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={HandleMinus}><TiMinus /></p>
+                  <p className="w-6.5 h-6.5 bg-[#25d88194] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={HandlePlus}><FiPlus /></p>
+                  <p className="w-6.5 h-6.5 bg-[#fd1b1b88] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={HandleMinus}><TiMinus /></p>
                 </div>
             </div>
             {/* --------ProgressBar------------ */}
@@ -107,15 +117,15 @@ export const Dashboard = () => {
           </div>
         </div>
         {/* -------Input Box------- */}
-        <div className="mt-10 flex justify-between items-center border-b-2 border-[#57575775] pb-5">
+        <div className="HandleOut mt-10 flex justify-between items-center border-b-2 border-[#57575775] pb-5">
           <div className="flex items-center gap-3">
-            <input placeholder="Username..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-50 outline-none" name="search" type="search" />
-            <input placeholder="Number..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-50 outline-none" name="search" type="search" />
-            <input placeholder="Role..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-30 outline-none" name="search" type="search" />
-            <input placeholder="Date..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-60 outline-none" name="search" type="search" />
+            <input onChange={(e)=>SetInput(e.target.value)} placeholder="Username..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-50 outline-none" name="search" type="search" />
+            <input onChange={(e)=>SetInput2(e.target.value)} placeholder="Email..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-50 outline-none" name="search" type="search" />
+            <input onChange={(e)=>SetInput3(e.target.value)} placeholder="Role..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-30 outline-none" name="search" type="search" />
+            <input onChange={(e)=>SetInput4(e.target.value)} placeholder="Number..." className="input border-2 border-gray-300 px-5 py-2 rounded-[7px] w-60 outline-none" name="search" type="search" />
           </div>
           <div>
-          <button className="px-5 py-4 bg-gradient-to-br from-[#7ec8fa] to-[#4DB8FF] text-white rounded-2xl flex items-center gap-3 cursor-pointer w-60"><FiPlus size={22}/> Add</button>
+          <button onClick={HandleInput} className="px-5 py-4 bg-gradient-to-br from-[#7ec8fa] to-[#4DB8FF] text-white rounded-2xl flex items-center gap-3 cursor-pointer w-60"><FiPlus size={22}/> Add</button>
           </div>
         </div>
         {/* -------Profile Box------- */}
@@ -129,19 +139,19 @@ export const Dashboard = () => {
         <div className="mt-5 flex justify-around">
           <div className="flex items-center gap-3">
             <div className="h-12 w-12 bg-[#6C688A] rounded-4xl"></div>
-            <h2 className="font-medium">Joh doe</h2>
+            <h2 className="font-medium">{UserInput}</h2>
           </div>
 
           <div className="flex items-center gap-3">
-            <h2 className="font-medium">munnascript@gmail.com</h2>
+            <h2 className="font-medium">{UserInput2}</h2>
           </div>
 
           <div className="flex items-center gap-3">
-            <h2 className="font-medium bg-[#ff665246] py-1.5 px-6 rounded-2xl text-[#FF6652]">Admin</h2>
+            <h2 className="font-medium bg-[#ff665246] py-1.5 px-6 rounded-2xl text-[#FF6652]">{UserInput3}</h2>
           </div>
 
           <div className="flex items-center gap-3">
-            <h2 className="font-medium">0192345345</h2>
+            <h2 className="font-medium">{UserInput4}</h2>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 bg-[#25d881] rounded-2xl"></div>
