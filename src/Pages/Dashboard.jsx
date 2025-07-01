@@ -12,6 +12,8 @@ export const Dashboard = () => {
       TextNumber: "10438",
       barColor: '#FF6652',
       Width: '87%',
+      Percentage: '2.5%',
+      PercentageColor: '#00C566',
     },
     {
       Image: AddIcon,
@@ -19,6 +21,8 @@ export const Dashboard = () => {
       TextNumber: "563",
       barColor:  '#0099ff8e',
       Width: '57%',
+      Percentage: '0.5%',
+      PercentageColor: '#FD1B1B',
     },
     {
       Image: BookIcon,
@@ -26,6 +30,8 @@ export const Dashboard = () => {
       TextNumber: "135",
       barColor: '#FF6652',
       Width: '95%',
+      Percentage: '0.7%',
+      PercentageColor: '#00C566',
     },
     {
       Image: ReadIcon,
@@ -33,6 +39,8 @@ export const Dashboard = () => {
       TextNumber: "95",
       barColor: '#7F56D9' ,
       Width: '78%',
+      Percentage: '10.5%',
+      PercentageColor: '#FD1B1B',
     },
   ];
 
@@ -47,7 +55,7 @@ export const Dashboard = () => {
             <div className="flex gap-5 items-center">
               <img src={items.Image} alt="Icon" />
               <div>
-                <h2 className="text-[#3B3563] font-Inter">
+                <h2 className="text-[#3B3563] font-Inter text-[14px]">
                   {items.HeaderText}
                 </h2>
                 <p className="text-[24px] text-[#0A033C] font-semibold font-Inter">
@@ -58,6 +66,9 @@ export const Dashboard = () => {
             {/* --------ProgressBar------------ */}
             <div className=" relative w-full h-3 bg-[#c9c9c9] rounded-2xl mt-4">
               <div className="absolute left-0 bottom-0 h-full rounded-2xl" style={{ backgroundColor: items.barColor, width: items.Width }}></div>
+            </div>
+            <div className=" mt-2.5">
+              <p><span>{items.Percentage} </span> than last week</p>
             </div>
           </div>
         ))}
