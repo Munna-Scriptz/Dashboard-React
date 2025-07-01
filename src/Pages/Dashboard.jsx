@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BookIcon from "../assets/BookIcon.png";
 import AddIcon from "../assets/AddIcon.png";
 import ReadIcon from "../assets/ReadIcon.png";
@@ -10,11 +10,19 @@ import { TiMinus } from "react-icons/ti";
 
 
 export const Dashboard = () => {
+  const [Number , SetNumber] = useState(10435) 
+
+  const HandlePlus = () =>{
+    SetNumber(Number + 1)
+  }
+  const HandleMinus = () =>{
+    SetNumber(Number - 1)
+  }
   const MyData = [
     {
       Image: UserIcon,
       HeaderText: "Total Users",
-      TextNumber: "10438",
+      TextNumber: Number,
       barColor: '#FF6652',
       Width: '87%',
       Percentage: '2.5%',
@@ -52,7 +60,6 @@ export const Dashboard = () => {
       PercentageIcon: <FaArrowTrendDown color="#FD1B1B"/> ,
     },
   ];
-
   return (
     <>
       <div>
@@ -60,6 +67,7 @@ export const Dashboard = () => {
       </div>
       <div className="flex justify-between pr-10 mt-10">
         {MyData.map((items, e) => (
+          
           <div key={e}>
             <div className="flex gap-5 items-center">
               <img src={items.Image} alt="Icon" />
@@ -72,8 +80,8 @@ export const Dashboard = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                  <p className="w-6.5 h-6.5 bg-[#25d881] flex justify-center items-center text-center rounded-2xl cursor-pointer"><FiPlus /></p>
-                  <p className="w-6.5 h-6.5 bg-[#FD1B1B] flex justify-center items-center text-center rounded-2xl cursor-pointer"><TiMinus /></p>
+                  <p className="w-6.5 h-6.5 bg-[#25d881] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={HandlePlus}><FiPlus /></p>
+                  <p className="w-6.5 h-6.5 bg-[#FD1B1B] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={HandleMinus}><TiMinus /></p>
                 </div>
             </div>
             {/* --------ProgressBar------------ */}
