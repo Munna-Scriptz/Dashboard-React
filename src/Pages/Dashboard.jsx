@@ -62,9 +62,12 @@ export const Dashboard = () => {
   ];
   return (
     <>
+    {/* --------------Header---------------- */}
       <div>
         <h1 className="text-[30px] font-Inter font-medium">User Dashboard</h1>
       </div>
+    {/* --------------Statistic---------------- */}
+
       <div className="flex justify-between pr-10 mt-10">
         {MyData.map((items, e) => (
           
@@ -94,6 +97,16 @@ export const Dashboard = () => {
           </div>
         ))}
       </div>
+    {/* --------------Add User---------------- */}
+    <section className="mt-15 pr-10">
+        <div className="flex justify-between items-center">
+          <h1 className="text-[25px] font-Inter font-medium">Add Users</h1>
+          <div className="flex items-center gap-5">
+          <button className="px-5 py-4 bg-gradient-to-br from-[#f88e80] to-[#FF6652] text-white rounded-2xl flex items-center gap-3 cursor-pointer">Delete User</button>
+          <button className="px-5 py-4 bg-gradient-to-br from-[#7ec8fa] to-[#4DB8FF] text-white rounded-2xl flex items-center gap-3 cursor-pointer"><FiPlus size={22}/> Add user</button>
+          </div>
+        </div>
+    </section>
     </>
   );
 };
