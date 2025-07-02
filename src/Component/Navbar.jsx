@@ -16,7 +16,7 @@ export const Navbar = () => {
     },
     {
       path: '/About' ,
-      Name: 'About' ,
+      Name: 'About Us' ,
       icon: <GrGroup size={24}/>
     },
     {
