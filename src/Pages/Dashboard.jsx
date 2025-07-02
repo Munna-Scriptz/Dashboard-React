@@ -10,54 +10,72 @@ import { TiMinus } from "react-icons/ti";
 
 
 export const Dashboard = () => {
-  const [Number , SetNumber] = useState(10435) 
+  // ------Quantity Selector----- 
+    const [Click , setClick] = useState(10456)
+    const [Click2 , setClick2] = useState(563)
+    const [Click3 , setClick3] = useState(135)
+    const [Click4 , setClick4] = useState(95)
 
-  const HandlePlus = () =>{
-    SetNumber(Number + 1)
-  }
-  const HandleMinus = () =>{
-    SetNumber(Number - 1)
-  }
+    const HandlePlus  = () =>  setClick(Click + 1)
+    const HandlePlus2 = () => setClick2(Click2 + 1)
+    const HandlePlus3 = () => setClick3(Click3 + 1)
+    const HandlePlus4 = () => setClick4(Click4 + 1)
+
+    const HandleMinus = () => setClick(Click - 1)
+    const HandleMinus2 = () => setClick2(Click2 -1)
+    const HandleMinus3 = () => setClick3(Click3 -1)
+    const HandleMinus4 = () => setClick4(Click4 -1)
+
+
+  // ------Details Function---- 
   const MyData = [
     {
       Image: UserIcon,
       HeaderText: "Total Users",
-      TextNumber: Number,
+      TextNumber: Click,
       barColor: '#FF6652',
       Width: '87%',
       Percentage: '2.5%',
       PercentageColor: '#00C566',
       PercentageIcon: <FaArrowTrendUp color="#00C566"/> ,
+      HandleClick: HandlePlus,
+      HandleMinus: HandleMinus,
     },
     {
       Image: AddIcon,
       HeaderText: "Total Users Added",
-      TextNumber: "563",
+      TextNumber: Click2,
       barColor:  '#0099ff8e',
       Width: '57%',
       Percentage: '0.5%',
       PercentageColor: '#FD1B1B',
       PercentageIcon: <FaArrowTrendDown color="#FD1B1B"/> ,
+      HandleClick: HandlePlus2,
+      HandleMinus: HandleMinus2,
     },
     {
       Image: BookIcon,
       HeaderText: "Total Books Published",
-      TextNumber: "135",
+      TextNumber: Click3,
       barColor: '#FF6652',
       Width: '95%',
       Percentage: '10.7%',
       PercentageColor: '#00C566',
       PercentageIcon: <FaArrowTrendUp color="#00C566"/> ,
+      HandleClick: HandlePlus3,
+      HandleMinus: HandleMinus3,
     },
     {
       Image: ReadIcon,
       HeaderText: "Total Books Reded",
-      TextNumber: "95",
+      TextNumber: Click4,
       barColor: '#7F56D9' ,
       Width: '78%',
       Percentage: '0.7%',
       PercentageColor: '#FD1B1B',
       PercentageIcon: <FaArrowTrendDown color="#FD1B1B"/> ,
+      HandleClick: HandlePlus4,
+      HandleMinus: HandleMinus4,
     },
   ];
   const [UserInput , SetInput] = useState('')
@@ -65,7 +83,7 @@ export const Dashboard = () => {
   const [UserInput3 , SetInput3] = useState('')
   const [UserInput4 , SetInput4] = useState('')
 
-  const HandleInput = (Data)=>{
+  const HandleInput = ()=>{
     if(UserInput == ''){
       alert('Information Cannot be empty')
     }
@@ -93,8 +111,8 @@ export const Dashboard = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                  <p className="w-6.5 h-6.5 bg-[#25d88194] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={HandlePlus}><FiPlus /></p>
-                  <p className="w-6.5 h-6.5 bg-[#fd1b1b88] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={HandleMinus}><TiMinus /></p>
+                  <p className="w-6.5 h-6.5 bg-[#25d88194] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={items.HandleClick}><FiPlus /></p>
+                  <p className="w-6.5 h-6.5 bg-[#fd1b1b88] flex justify-center items-center text-center rounded-2xl cursor-pointer" onClick={items.HandleMinus}><TiMinus /></p>
                 </div>
             </div>
             {/* --------ProgressBar------------ */}
