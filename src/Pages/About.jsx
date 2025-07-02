@@ -1,4 +1,5 @@
 import React from "react";
+import { RiCheckboxCircleFill } from "react-icons/ri";
 
 export const About = () => {
   return (
@@ -7,7 +8,7 @@ export const About = () => {
         <div>
           <img
             className="w-[555px]"
-            src="src\assets\AboutImage2.webp"
+            src="src\assets\AboutImage.jpg"
             alt="About image"
           />
           <div className="flex items-center justify-around mt-10">
@@ -45,6 +46,21 @@ export const About = () => {
             Education is the process of acquiring knowledge, skills, values, and
             attitudes through various methods such as teaching, training
           </p>
+          {/* -------List----- */}
+          <div className="flex gap-3 mt-10">
+            <RiCheckboxCircleFill size={30} fill="#0099ff"/>
+            <div>
+              <h2 className="font-Inter text-[16px] font-bold text-[#192335]">Smart Scholars</h2>
+              <p className="w-[327px] font-Inter text-[#192335] text-[15px] mt-2.5">The goal of ecology is to understand how organisms interact with each other </p>
+            </div>
+          </div>
+          <div className="flex gap-3 mt-7">
+            <RiCheckboxCircleFill size={30} fill="#0099ff"/>
+            <div>
+              <h2 className="font-Inter text-[16px] font-bold text-[#192335]">Knowledge Hub</h2>
+              <p className="w-[327px] font-Inter text-[#192335] text-[15px] mt-2.5">Ecologists use a variety of methods, such as field observa tions, experiments</p>
+            </div>
+          </div>
         </div>
       </section>
     </>
