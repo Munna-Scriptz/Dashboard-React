@@ -39,7 +39,7 @@ export const Navbar = () => {
 
   return (
     <div className='relative w-[320px] h-screen'>
-      <nav className='SideBar bg-white py-5 px-5 w-[250px] h-screen flex flex-col absolute fixed'>
+      <nav className='SideBar bg-white py-5 px-5 w-[250px] h-screen flex flex-col fixed'>
         <div className='absolute w-full h-40 left-0 top-0 z-0 bg-[url(./assets/Shape1.png)] bg-center bg-no-repeat bg-cover'></div>
         <div className="flex flex-col items-center z-10 mb-6">
           <div><img className='w-40 rounded-full border-3 border-[#0099ff8e] outline-3 outline-white' src="src\assets\Zangetsu.jpg" alt="Profile" /></div>
