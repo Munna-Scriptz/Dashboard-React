@@ -90,4 +90,4 @@ Want to discuss ideas, collaborate, or just share feedback?
 
 Email: [munnascriptz@gmail.com]
 
-LinkedIn: [Your LinkedIn Profile]
+LinkedIn: [Munna-Scrips]
