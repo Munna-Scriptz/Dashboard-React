@@ -88,6 +88,6 @@ Let's Connect
 
 Want to discuss ideas, collaborate, or just share feedback?
 
-Email: [your.email@example.com]
+Email: [munnascriptz@gmail.com]
 
 LinkedIn: [Your LinkedIn Profile]
